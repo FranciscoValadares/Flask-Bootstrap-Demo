@@ -214,4 +214,5 @@ def password_check(password):
 if __name__ == "__main__":
 	# change to app.run(host="0.0.0.0"), if you want other machines to be able to reach the webserver.
 	#app.run() 
-    app.run(host="0.0.0.0")
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
